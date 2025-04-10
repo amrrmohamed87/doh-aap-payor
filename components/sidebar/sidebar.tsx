@@ -9,10 +9,12 @@ import {
   Bell,
   BellIcon,
   ChartBarBig,
+  CheckCircle,
   LayoutDashboard,
   LayoutGrid,
   LogOut,
   User,
+  X,
 } from "lucide-react";
 import ToolTipComponent from "../reusable-components/ToolTipComponent";
 import NavigationLink from "./sidebar-routes/NavigationLink";
@@ -125,7 +127,8 @@ export const Sidebar = () => {
               <LayoutDashboard className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
             </NavigationLink>
           </ToolTipComponent>
-          <ToolTipComponent tooltipText="Providers Ranking">
+
+          <ToolTipComponent tooltipText="Claims Analysis and Dashboard">
             <NavigationLink
               closeSidebar={handleNavigationClose}
               restateHamburger={() => toggle()}
@@ -135,6 +138,29 @@ export const Sidebar = () => {
               <ChartBarBig className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
             </NavigationLink>
           </ToolTipComponent>
+
+          <ToolTipComponent tooltipText="Approved Claims">
+            <NavigationLink
+              closeSidebar={handleNavigationClose}
+              restateHamburger={() => toggle()}
+              link="/providers-ranking"
+              name="Approved Claims"
+            >
+              <CheckCircle className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
+            </NavigationLink>
+          </ToolTipComponent>
+
+          <ToolTipComponent tooltipText="Rejected Claims">
+            <NavigationLink
+              closeSidebar={handleNavigationClose}
+              restateHamburger={() => toggle()}
+              link="/providers-ranking"
+              name="Rejected Claims"
+            >
+              <X className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
+            </NavigationLink>
+          </ToolTipComponent>
+
           <ToolTipComponent tooltipText="Payers Dashboard">
             <NavigationLink
               closeSidebar={handleNavigationClose}
