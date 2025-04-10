@@ -8,17 +8,11 @@ import {
   ArrowRight,
   Bell,
   BellIcon,
-  BrainCircuit,
-  ChartArea,
   ChartBarBig,
-  Home,
   LayoutDashboard,
   LayoutGrid,
-  LayoutPanelLeft,
   LogOut,
   User,
-  Users,
-  Waypoints,
 } from "lucide-react";
 import ToolTipComponent from "../reusable-components/ToolTipComponent";
 import NavigationLink from "./sidebar-routes/NavigationLink";
@@ -121,21 +115,11 @@ export const Sidebar = () => {
         </motion.div>
 
         <div className="flex flex-col gap-5 flex-grow">
-          <ToolTipComponent tooltipText="Home">
-            <NavigationLink
-              closeSidebar={handleNavigationClose}
-              restateHamburger={() => toggle()}
-              link="/"
-              name="Home"
-            >
-              <Home className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-          </ToolTipComponent>
           <ToolTipComponent tooltipText="Providers Dashboard">
             <NavigationLink
               closeSidebar={handleNavigationClose}
               restateHamburger={() => toggle()}
-              link="/providers"
+              link="/"
               name="Dashboard"
             >
               <LayoutDashboard className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
