@@ -106,7 +106,7 @@ export const FwaResultsTable = ({ data }: { data: FWAData[] }) => {
                           Triggered Columns
                         </h4>
                         <div className="bg-slate-100 p-4 rounded-lg space-y-2 text-sm">
-                          {Object.entries(item.triggerdColumns).map(
+                          {Object.entries(item.triggeredColumns).map(
                             ([key, value], i) => (
                               <div key={i} className="text-gray-700">
                                 <span className="font-medium">{key}:</span>{" "}
@@ -126,19 +126,19 @@ export const FwaResultsTable = ({ data }: { data: FWAData[] }) => {
                         <div className="grid grid-cols-1 md:grid-cols-3 gap-4 bg-slate-100 p-4 rounded-lg">
                           <InfoCard
                             label="Fraud (F)"
-                            value={`${(item.probablilites.F * 100).toFixed(
+                            value={`${(item.probabilities.F * 100).toFixed(
                               2
                             )}%`}
                           />
                           <InfoCard
                             label="Waste (W)"
-                            value={`${(item.probablilites.W * 100).toFixed(
+                            value={`${(item.probabilities.W * 100).toFixed(
                               2
                             )}%`}
                           />
                           <InfoCard
                             label="Abuse (A)"
-                            value={`${(item.probablilites.A * 100).toFixed(
+                            value={`${(item.probabilities.A * 100).toFixed(
                               2
                             )}%`}
                           />

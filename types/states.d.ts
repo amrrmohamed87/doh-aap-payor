@@ -130,7 +130,7 @@ declare type ClaimsTableProps = {
   errorMsg?: string;
 };
 
-declare type probablilites = {
+declare type probabilities = {
   A: number;
   F: number;
   W: number;
@@ -145,8 +145,8 @@ declare type FWAData = {
   id: number;
   flaggedAs: "Abuse" | "Fraud" | "Waste" | "Unknown" | string;
   predictionCode: "A" | "F" | "W" | "Unknown" | string;
-  probablilites: probablilites;
-  triggerdColumns: tiggeredColumns;
+  probabilities: probabilities;
+  triggeredColumns: tiggeredColumns;
   createdAt: string;
   providerId: string;
   memberId: string;
