@@ -32,3 +32,51 @@ declare type ToolTipComponentProps = {
   side?: "top" | "right" | "bottom" | "left";
   className?: string;
 };
+
+declare type MetricsStatsProps = {
+  title: string;
+  value: string | number | undefined;
+  icon: React.ReactNode;
+  trend?: "up" | "down" | "neutral";
+  trendValue?: string;
+  className?: string;
+};
+
+declare type PaginationProps = {
+  currentPage: number;
+  totalPages: number;
+  limit: number;
+  onPageChange: (page: number) => void;
+  onLimitChange: (limit: number) => void;
+  onFirstPage: () => void;
+  onLastPage: () => void;
+  onPreviousPage: () => void;
+  onNextPage: () => void;
+};
+
+declare type DialogModelProps = {
+  tritggerBtnClassName?: string;
+  triggerBtnText?: string;
+  triggerBtnFn?: VoidFunction;
+  isConfirming?: boolean;
+  loaderIconCn?: string;
+  dialogTitle?: string;
+  dialogDescription?: string;
+  dialogCancelBtnText?: string;
+  dialogConfirmBtnText?: string;
+  onCancel?: VoidFunction;
+  onConfirm?: VoidFunction;
+  showConfirmBtn?: boolean;
+  children?: React.ReactNode;
+};
+
+declare type TableHeaderProps = {
+  cols: (string | { label: string; icon?: React.ReactNode })[];
+  extraHeader?: string;
+  totalCol?: string;
+  tableBody: React.ReactNode;
+  data: any[];
+  notFoundMsg?: string;
+  isLoadingState?: boolean;
+  isLoadingMsg?: string;
+};
