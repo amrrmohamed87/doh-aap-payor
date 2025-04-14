@@ -7,9 +7,6 @@ import Image from "next/image";
 import {
   ArrowRight,
   Bell,
-  BellIcon,
-  ChartBarBig,
-  CheckCircle,
   LayoutDashboard,
   LayoutGrid,
   LogOut,
@@ -86,17 +83,17 @@ export const Sidebar = () => {
                 initial="close"
                 animate="open"
                 exit="close"
-                className="flex w-36"
+                className="flex w-44"
                 key="logo" // Key for proper animation tracking
               >
                 <Image
-                  src="/logo.jpg"
+                  src="/logo.png"
                   alt="Logo"
-                  width={160}
+                  width={192}
                   height={32}
                   priority
                   sizes="(max-width: 1024px) 0px, 100vw"
-                  className="w-40 h-10"
+                  className="w-48 h-8"
                 />
               </motion.div>
             )}
@@ -117,68 +114,25 @@ export const Sidebar = () => {
         </motion.div>
 
         <div className="flex flex-col gap-5 flex-grow">
-          <ToolTipComponent tooltipText="Providers Dashboard">
+          <ToolTipComponent tooltipText="Claim Analysis Dashboard">
             <NavigationLink
               closeSidebar={handleNavigationClose}
               restateHamburger={() => toggle()}
               link="/"
-              name="Dashboard"
+              name="Claim Analysis"
             >
               <LayoutDashboard className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
             </NavigationLink>
           </ToolTipComponent>
 
-          <ToolTipComponent tooltipText="Claims Analysis and Dashboard">
+          <ToolTipComponent tooltipText="Suspected FWA Dashboard">
             <NavigationLink
               closeSidebar={handleNavigationClose}
               restateHamburger={() => toggle()}
-              link="/providers-ranking"
-              name="Claims Analysis"
-            >
-              <ChartBarBig className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-          </ToolTipComponent>
-
-          <ToolTipComponent tooltipText="Approved Claims">
-            <NavigationLink
-              closeSidebar={handleNavigationClose}
-              restateHamburger={() => toggle()}
-              link="/providers-ranking"
-              name="Approved Claims"
-            >
-              <CheckCircle className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-          </ToolTipComponent>
-
-          <ToolTipComponent tooltipText="Rejected Claims">
-            <NavigationLink
-              closeSidebar={handleNavigationClose}
-              restateHamburger={() => toggle()}
-              link="/providers-ranking"
-              name="Rejected Claims"
-            >
-              <X className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-          </ToolTipComponent>
-
-          <ToolTipComponent tooltipText="Payers Dashboard">
-            <NavigationLink
-              closeSidebar={handleNavigationClose}
-              restateHamburger={() => toggle()}
-              link="/payers"
+              link="/fwa"
               name="FWA Dashboard"
             >
               <LayoutGrid className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
-            </NavigationLink>
-          </ToolTipComponent>
-          <ToolTipComponent tooltipText="Payers Ranking">
-            <NavigationLink
-              closeSidebar={handleNavigationClose}
-              restateHamburger={() => toggle()}
-              link="/payers-ranking"
-              name="FWA Alerts"
-            >
-              <BellIcon className="stroke-inherit stroke-[0.75] min-w-8 w-8" />
             </NavigationLink>
           </ToolTipComponent>
         </div>
