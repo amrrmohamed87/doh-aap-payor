@@ -13,7 +13,6 @@ export const FWAWrapper = () => {
   const {
     params,
     fwaData,
-    isLoadingFwaData,
     handleUpdateParams,
     currentPage,
     totalPages,

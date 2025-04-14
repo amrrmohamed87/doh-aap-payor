@@ -11,7 +11,6 @@ import {
   LayoutGrid,
   LogOut,
   User,
-  X,
 } from "lucide-react";
 import ToolTipComponent from "../reusable-components/ToolTipComponent";
 import NavigationLink from "./sidebar-routes/NavigationLink";
